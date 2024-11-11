@@ -1,0 +1,29 @@
+name: ci-test
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        service: [authentication-service, gateway-service, payments-service]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: "^1.21"
+
+      - name: Run tests
+        run: |
+          cd ${{ matrix.service }}
+          make race-test
+        env:
+          CI: true

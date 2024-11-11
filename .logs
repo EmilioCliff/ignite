@@ -1,0 +1,101 @@
+2024/11/11 19:09:55 Running in interactive mode.
+2024/11/11 19:10:07 Initializing project projo
+2024/11/11 19:10:07 Creating file: /home/emilio/ignite-test/.gitignore
+2024/11/11 19:10:07 Creating file: /home/emilio/ignite-test/Makefile
+2024/11/11 19:10:07 Creating file: /home/emilio/ignite-test/Dockerfile
+2024/11/11 19:10:07 Creating empty directory: /home/emilio/ignite-test/pkg
+2024/11/11 19:10:07 Creating directory: /home/emilio/ignite-test/.envs
+2024/11/11 19:10:07 Creating directory: /home/emilio/ignite-test/.envs/.local
+2024/11/11 19:10:07 Creating file: /home/emilio/ignite-test/.envs/.local/config.env
+2024/11/11 19:10:07 Creating directory: /home/emilio/ignite-test/.envs/configs
+2024/11/11 19:10:07 Creating file: /home/emilio/ignite-test/.envs/configs/sqlc.yaml
+2024/11/11 19:10:07 Error: failed to create project structure: failed to parse template templates/sqlc.txt: open templates/sqlc.txt: no such file or directory
+2024/11/11 19:11:42 Running in interactive mode.
+2024/11/11 19:11:49 Initializing project projo
+2024/11/11 19:11:49 Creating directory: /home/emilio/ignite-test/internal
+2024/11/11 19:11:49 Creating empty directory: /home/emilio/ignite-test/internal/repository
+2024/11/11 19:11:49 Creating empty directory: /home/emilio/ignite-test/internal/mock
+2024/11/11 19:11:49 Creating empty directory: /home/emilio/ignite-test/internal/services
+2024/11/11 19:11:49 Creating directory: /home/emilio/ignite-test/internal/postgres
+2024/11/11 19:11:49 Creating empty directory: /home/emilio/ignite-test/internal/postgres/generated
+2024/11/11 19:11:49 Creating empty directory: /home/emilio/ignite-test/internal/postgres/migrations
+2024/11/11 19:11:49 Creating empty directory: /home/emilio/ignite-test/internal/postgres/queries
+2024/11/11 19:11:49 Creating empty directory: /home/emilio/ignite-test/internal/postgres/mock
+2024/11/11 19:11:49 Creating empty directory: /home/emilio/ignite-test/internal/handlers
+2024/11/11 19:11:49 Creating file: /home/emilio/ignite-test/README.md
+2024/11/11 19:11:49 Creating directory: /home/emilio/ignite-test/.github
+2024/11/11 19:11:49 Creating directory: /home/emilio/ignite-test/.github/workflows
+2024/11/11 19:11:49 Creating file: /home/emilio/ignite-test/.github/workflows/ci.yml
+2024/11/11 19:11:49 Creating file: /home/emilio/ignite-test/Dockerfile
+2024/11/11 19:11:49 Creating empty directory: /home/emilio/ignite-test/pkg
+2024/11/11 19:11:49 Creating directory: /home/emilio/ignite-test/.envs
+2024/11/11 19:11:49 Creating directory: /home/emilio/ignite-test/.envs/configs
+2024/11/11 19:11:49 Creating file: /home/emilio/ignite-test/.envs/configs/sqlc.yaml
+2024/11/11 19:11:49 Error: failed to create project structure: failed to parse template templates/sqlc.txt: open templates/sqlc.txt: no such file or directory
+2024/11/11 19:14:25 Running in interactive mode.
+2024/11/11 19:14:36 Initializing project projo
+2024/11/11 19:14:36 Creating empty directory: /home/emilio/ignite-test/pkg
+2024/11/11 19:14:36 Creating directory: /home/emilio/ignite-test/.envs
+2024/11/11 19:14:36 Creating directory: /home/emilio/ignite-test/.envs/.local
+2024/11/11 19:14:36 Creating file: /home/emilio/ignite-test/.envs/.local/config.env
+2024/11/11 19:14:36 Creating directory: /home/emilio/ignite-test/.envs/configs
+2024/11/11 19:14:36 Creating file: /home/emilio/ignite-test/.envs/configs/sqlc.yaml
+2024/11/11 19:14:36 Creating directory: /home/emilio/ignite-test/cmd
+2024/11/11 19:14:36 Creating directory: /home/emilio/ignite-test/cmd/server
+2024/11/11 19:14:36 Creating file: /home/emilio/ignite-test/cmd/server/main.go
+2024/11/11 19:14:36 Creating directory: /home/emilio/ignite-test/cmd/cli
+2024/11/11 19:14:36 Creating file: /home/emilio/ignite-test/cmd/cli/main.go
+2024/11/11 19:14:36 Creating file: /home/emilio/ignite-test/README.md
+2024/11/11 19:14:36 Creating file: /home/emilio/ignite-test/.gitignore
+2024/11/11 19:14:36 Creating file: /home/emilio/ignite-test/Makefile
+2024/11/11 19:14:36 Creating file: /home/emilio/ignite-test/Dockerfile
+2024/11/11 19:14:36 Creating directory: /home/emilio/ignite-test/internal
+2024/11/11 19:14:36 Creating empty directory: /home/emilio/ignite-test/internal/handlers
+2024/11/11 19:14:36 Creating empty directory: /home/emilio/ignite-test/internal/repository
+2024/11/11 19:14:36 Creating empty directory: /home/emilio/ignite-test/internal/mock
+2024/11/11 19:14:36 Creating empty directory: /home/emilio/ignite-test/internal/services
+2024/11/11 19:14:36 Creating directory: /home/emilio/ignite-test/internal/mysql
+2024/11/11 19:14:36 Creating empty directory: /home/emilio/ignite-test/internal/mysql/generated
+2024/11/11 19:14:36 Creating empty directory: /home/emilio/ignite-test/internal/mysql/migrations
+2024/11/11 19:14:36 Creating empty directory: /home/emilio/ignite-test/internal/mysql/queries
+2024/11/11 19:14:36 Creating empty directory: /home/emilio/ignite-test/internal/mysql/mock
+2024/11/11 19:14:36 Creating directory: /home/emilio/ignite-test/.github
+2024/11/11 19:14:36 Creating directory: /home/emilio/ignite-test/.github/workflows
+2024/11/11 19:14:36 Creating file: /home/emilio/ignite-test/.github/workflows/ci.yml
+2024/11/11 19:14:36 Initializing go module...
+2024/11/11 19:14:36 Initializing git repository...
+2024/11/11 19:24:15 Running in interactive mode.
+2024/11/11 19:24:23 Initializing project projo
+2024/11/11 19:24:23 Creating empty directory: /home/emilio/ignite-test/pkg
+2024/11/11 19:24:23 Creating directory: /home/emilio/ignite-test/cmd
+2024/11/11 19:24:23 Creating directory: /home/emilio/ignite-test/cmd/server
+2024/11/11 19:24:23 Creating file: /home/emilio/ignite-test/cmd/server/main.go
+2024/11/11 19:24:23 Creating directory: /home/emilio/ignite-test/cmd/cli
+2024/11/11 19:24:23 Creating file: /home/emilio/ignite-test/cmd/cli/main.go
+2024/11/11 19:24:23 Creating directory: /home/emilio/ignite-test/internal
+2024/11/11 19:24:23 Creating empty directory: /home/emilio/ignite-test/internal/repository
+2024/11/11 19:24:23 Creating empty directory: /home/emilio/ignite-test/internal/mock
+2024/11/11 19:24:23 Creating empty directory: /home/emilio/ignite-test/internal/services
+2024/11/11 19:24:23 Creating directory: /home/emilio/ignite-test/internal/postgres
+2024/11/11 19:24:23 Creating empty directory: /home/emilio/ignite-test/internal/postgres/generated
+2024/11/11 19:24:23 Creating empty directory: /home/emilio/ignite-test/internal/postgres/migrations
+2024/11/11 19:24:23 Creating empty directory: /home/emilio/ignite-test/internal/postgres/queries
+2024/11/11 19:24:23 Creating empty directory: /home/emilio/ignite-test/internal/postgres/mock
+2024/11/11 19:24:23 Creating empty directory: /home/emilio/ignite-test/internal/handlers
+2024/11/11 19:24:23 Creating directory: /home/emilio/ignite-test/.github
+2024/11/11 19:24:23 Creating directory: /home/emilio/ignite-test/.github/workflows
+2024/11/11 19:24:23 Creating file: /home/emilio/ignite-test/.github/workflows/ci.yml
+2024/11/11 19:24:23 Creating file: /home/emilio/ignite-test/Dockerfile
+2024/11/11 19:24:23 Creating directory: /home/emilio/ignite-test/.envs
+2024/11/11 19:24:23 Creating directory: /home/emilio/ignite-test/.envs/.local
+2024/11/11 19:24:23 Creating file: /home/emilio/ignite-test/.envs/.local/config.env
+2024/11/11 19:24:23 Creating directory: /home/emilio/ignite-test/.envs/configs
+2024/11/11 19:24:23 Creating file: /home/emilio/ignite-test/.envs/configs/sqlc.yaml
+2024/11/11 19:24:23 Creating file: /home/emilio/ignite-test/README.md
+2024/11/11 19:24:23 Creating file: /home/emilio/ignite-test/.gitignore
+2024/11/11 19:24:23 Creating file: /home/emilio/ignite-test/Makefile
+2024/11/11 19:24:23 Creating directory: /home/emilio/ignite-test/gapi
+2024/11/11 19:24:23 Creating empty directory: /home/emilio/ignite-test/gapi/proto
+2024/11/11 19:24:23 Creating empty directory: /home/emilio/ignite-test/gapi/generated
+2024/11/11 19:24:23 Initializing go module...
+2024/11/11 19:24:23 Initializing git repository...

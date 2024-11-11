@@ -1,0 +1,15 @@
+version: "2"
+sql:
+  - engine: "{{ .DBType }}"
+    queries: "../../internal/{{ .DBType }}/queries/*.sql"
+    schema: "../../internal/{{ .DBType }}/migrations/*.sql"
+    gen:
+      go:
+        package: "generated"
+        out: "../../internal/{{ .DBType }}/generated"
+        emit_json_tags: true
+        emit_interface: true
+        {{if .SqlPackage }} sql_package: "pgx/v5" {{ end }}
+        overrides:
+          - db_type: "timestamptz"
+            go_type: "time.Time"
