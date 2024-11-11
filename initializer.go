@@ -1,6 +1,7 @@
 package main
 
 import (
+	"embed"
 	"fmt"
 	"log"
 	"os"
@@ -9,6 +10,8 @@ import (
 	"sync"
 	"text/template"
 )
+
+var templatesFS embed.FS
 
 type ProjectInitializer struct {
 	path           string
@@ -188,20 +191,18 @@ func CreateDirectories(structure map[string]interface{}, basePath string, data t
 
 			if content, exists := templates[name]; exists {
 				if content == "" {
-					templatePath, err := MustGetExecutablePath(name)
-					if err != nil {
-						file.Close()
-						mutex.Unlock()
+					templatePath := fmt.Sprintf("templates/%s.txt", name[:len(name)-len(".yaml")])
+					// templatePath, err := MustGetExecutablePath(name)
+					// if err != nil {
+					// 	file.Close()
+					// 	mutex.Unlock()
 
-						return fmt.Errorf("failed to get template path: %v", err)
-					}
+					// 	return fmt.Errorf("failed to get template path: %v", err)
+					// }
 					// templatePath := fmt.Sprintf("%s/templates/%s", HOME, name[:len(name)-len(".yaml")]+".txt")
 
-					tmpl, err := template.ParseFiles(templatePath)
+					tmpl, err := template.ParseFS(templatesFS, templatePath)
 					if err != nil {
-						file.Close()
-						mutex.Unlock()
-
 						return fmt.Errorf("failed to parse template %s: %v", templatePath, err)
 					}
 
