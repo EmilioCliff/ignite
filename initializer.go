@@ -189,15 +189,6 @@ func CreateDirectories(structure map[string]interface{}, basePath string, data t
 			if content, exists := templates[name]; exists {
 				if content == "" {
 					templatePath := fmt.Sprintf("templates/%s.txt", name[:len(name)-len(".yaml")])
-					// templatePath, err := MustGetExecutablePath(name)
-					// if err != nil {
-					// 	file.Close()
-					// 	mutex.Unlock()
-
-					// 	return fmt.Errorf("failed to get template path: %v", err)
-					// }
-					// templatePath := fmt.Sprintf("%s/templates/%s", HOME, name[:len(name)-len(".yaml")]+".txt")
-					log.Println(templatesFS)
 
 					tmpl, err := template.ParseFS(templatesFS, templatePath)
 					if err != nil {
