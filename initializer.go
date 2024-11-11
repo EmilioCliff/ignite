@@ -200,6 +200,7 @@ func CreateDirectories(structure map[string]interface{}, basePath string, data t
 					// 	return fmt.Errorf("failed to get template path: %v", err)
 					// }
 					// templatePath := fmt.Sprintf("%s/templates/%s", HOME, name[:len(name)-len(".yaml")]+".txt")
+					log.Println(templatesFS)
 
 					tmpl, err := template.ParseFS(templatesFS, templatePath)
 					if err != nil {
