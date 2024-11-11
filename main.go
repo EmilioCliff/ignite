@@ -1,6 +1,7 @@
 package main
 
 import (
+	"embed"
 	"fmt"
 	"io"
 	"log"
@@ -9,6 +10,9 @@ import (
 
 	"github.com/spf13/cobra"
 )
+
+//go:embed templates/*.txt
+var templatesFS embed.FS
 
 func main() {
 	var (

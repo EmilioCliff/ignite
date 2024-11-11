@@ -1,7 +1,6 @@
 package main
 
 import (
-	"embed"
 	"fmt"
 	"log"
 	"os"
@@ -10,8 +9,6 @@ import (
 	"sync"
 	"text/template"
 )
-
-var templatesFS embed.FS
 
 type ProjectInitializer struct {
 	path           string
