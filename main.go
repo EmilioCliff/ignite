@@ -89,7 +89,7 @@ Supported Controllers: user, auth, product, order`,
 			log.Println("Initializing project", projectName)
 
 			if err := p.runSetup(); err != nil {
-				log.Println("Error:", err)
+				fmt.Printf("Error: %v\n", err)
 				os.Exit(1)
 			}
 		},
