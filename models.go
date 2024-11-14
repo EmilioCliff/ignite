@@ -8,10 +8,12 @@ import (
 )
 
 var supportedDBTypes = []string{"postgres", "mysql"}
+
 var supportedControllers = []string{"grpc", "http"}
 
 func runInInteractiveMode(data *ProjectInitializer) {
 	log.Println("Running in interactive mode.")
+
 	dbPrompt := PromptContent{
 		label:    "Choose a database type",
 		errorMsg: "please provide a database type",

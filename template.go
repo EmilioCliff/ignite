@@ -38,16 +38,6 @@ func main() {
 `,
 
 	"sqlc.yaml": "",
-
-	// 	"sqlc.yaml": `
-	// version: "1"
-	// packages:
-	//   - path: "internal/mysql/queries"
-	//     queries: "./queries/"
-	//     schema: "./migrations/"
-	//     engine: "mysql"
-	// `,
-
 	"ci.yml": `
 name: ci-test
 

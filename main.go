@@ -47,7 +47,6 @@ Supported Controllers: user, auth, product, order`,
 			return nil
 		},
 		Run: func(cmd *cobra.Command, args []string) {
-			log.Println(dbType, controlType, withWorkflow, withDockerfile, path, interactive, verbose)
 			logFile, err := os.OpenFile(".logs", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 			if err != nil {
 				fmt.Printf("Error opening log file: %v\n", err)

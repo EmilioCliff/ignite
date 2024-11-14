@@ -192,6 +192,9 @@ func CreateDirectories(structure map[string]interface{}, basePath string, data t
 
 					tmpl, err := template.ParseFS(templatesFS, templatePath)
 					if err != nil {
+						file.Close()
+						mutex.Unlock()
+
 						return fmt.Errorf("failed to parse template %s: %v", templatePath, err)
 					}
 

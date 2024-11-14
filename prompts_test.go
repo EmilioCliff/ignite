@@ -9,7 +9,6 @@ func TestPromptGetInput(t *testing.T) {
 	// 	label: "Test input",
 	// }
 
-	// Mock user input by overriding `PromptGetInput` implementation or using a testing library.
 	// Here we’ll assume PromptGetInput returns the expected result.
 	input := "test-input"
 	expected := "test-input"
