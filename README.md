@@ -44,16 +44,17 @@ ignite <project_name> --interactive
 
 **Steps:**
 
-**Prompt 1:** Choose a database type: (postgres or http)
-**Prompt 2:** Choose a controller type: (grpc or http)
-**Prompt 3:** Do you want to include a GitHub Actions workflow? (yes/no):
+**Prompt 1:** Choose a database type: (postgres or http)  
+**Prompt 2:** Choose a controller type: (grpc or http)  
+**Prompt 3:** Do you want to include a GitHub Actions workflow? (yes/no)
+**Prompt 4:** Do you want to include a Dockerfile? (yes/no)
 
-#### Required Inputs
+#### Requied Inputs
 
-Project Name **(required)**: The name of the project to be created.
-`--interactive` **(optional)**: Sets the mode to interactive when flag is passed interactive mode is set.
-`--path` **(optional)**: Sets the path to create directory (defaults to current dir).
-`--verbose` **(optional)**: logs the output to the terminal (defaults to false)
+Project Name **(required)**: The name of the project to be created.  
+`--interactive` **(optional)**: Sets the mode to interactive when flag is passed interactive mode is set.  
+`--path` **(optional)**: Sets the path to create directory (defaults to current dir).  
+`--verbose` **(optional)**: logs the output to the terminal (defaults to false).
 
 2. **Flag Mode**
 
@@ -68,14 +69,14 @@ ignite <project_name> -d <database> -c <controller> [other flags]
 
 #### Required Flags/Inputs:
 
-Project Name **(required)**: The name of the project to be created.
-`--database` **(required)**: Specifies the database type (e.g., postgres, mysql).
-`--controller` **(required)**: Specifies the controller type (e.g., http, grpc).
-`--path` **(optional)**: Sets the path to create directory (defaults to current dir).
-`--interactive` **(optional)**: Sets the mode to interactive when flag is passed interactive mode is set.
-`--withDockerfile` **(optional)**: Sets if a dockerfile will also be generated (defaults to false)
-`--withWorkflow` **(optional)**: Sets if a github workflow will also be generated (defaults to false)
-`--verbose` **(optional)**: logs the output to the terminal (defaults to false)
+Project Name **(required)**: The name of the project to be created.  
+`--database` **(required)**: Specifies the database type (e.g., postgres, mysql).  
+`--controller` **(required)**: Specifies the controller type (e.g., http, grpc).  
+`--path` **(optional)**: Sets the path to create directory (defaults to current dir).  
+`--interactive` **(optional)**: Sets the mode to interactive when flag is passed interactive mode is set.  
+`--withDockerfile` **(optional)**: Sets if a dockerfile will also be generated (defaults to false).  
+`--withWorkflow` **(optional)**: Sets if a github workflow will also be generated (defaults to false).  
+`--verbose` **(optional)**: logs the output to the terminal (defaults to false).
 
 No interactive prompts are shown.
 

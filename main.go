@@ -69,6 +69,8 @@ Supported Controllers: user, auth, product, order`,
 				verbose,
 			)
 
+			p.projectName = args[0]
+
 			// check if it will run in interactive or manual way
 			if interactive || len(args) == 1 && dbType == "" {
 				runInInteractiveMode(p)

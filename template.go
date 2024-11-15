@@ -1,5 +1,6 @@
 package main
 
+// contains default file templates
 var templates = map[string]string{
 	".gitignore": `
 # Binaries

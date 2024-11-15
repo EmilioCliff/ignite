@@ -11,7 +11,8 @@ var supportedDBTypes = []string{"postgres", "mysql"}
 
 var supportedControllers = []string{"grpc", "http"}
 
-func runInInteractiveMode(data *ProjectInitializer) {
+// runInInteractiveMode prompts the user for input to set the database type, controller type, inclusion of a GitHub Actions workflow, and inclusion of a Dockerfile.
+func runInInteractiveMode(data *projectInitializer) {
 	log.Println("Running in interactive mode.")
 
 	dbPrompt := PromptContent{
@@ -20,7 +21,7 @@ func runInInteractiveMode(data *ProjectInitializer) {
 		success:  "Database: ",
 	}
 
-	data.dbType = dbPrompt.PromptSelect(supportedDBTypes)
+	data.dbType = dbPrompt.promptSelect(supportedDBTypes)
 
 	controllerPrompt := PromptContent{
 		label:    "Choose a controller type",
@@ -28,7 +29,7 @@ func runInInteractiveMode(data *ProjectInitializer) {
 		success:  "Controller: ",
 	}
 
-	data.controlType = controllerPrompt.PromptSelect(supportedControllers)
+	data.controlType = controllerPrompt.promptSelect(supportedControllers)
 
 	withWorkflowPrompt := PromptContent{
 		label:    "Do you want to include a GitHub Actions workflow? (yes/no)",
@@ -36,7 +37,7 @@ func runInInteractiveMode(data *ProjectInitializer) {
 		success:  "Workflow: ",
 	}
 
-	if rst := withWorkflowPrompt.PromptGetInput(); rst == "yes" || rst == "y" {
+	if rst := withWorkflowPrompt.promptGetInput(); rst == "yes" || rst == "y" {
 		data.withWorkflow = true
 	} else {
 		data.withWorkflow = false
@@ -48,14 +49,16 @@ func runInInteractiveMode(data *ProjectInitializer) {
 		success:  "Workflow: ",
 	}
 
-	if rst := withDockerfilePrompt.PromptGetInput(); rst == "yes" || rst == "y" {
+	if rst := withDockerfilePrompt.promptGetInput(); rst == "yes" || rst == "y" {
 		data.withDockerfile = true
 	} else {
 		data.withDockerfile = false
 	}
 }
 
-func runFlagMode(data *ProjectInitializer) {
+// runFlagMode validates the inputs provided by the user in flag mode and if they are
+// invalid, it prints an error message and exits the program.
+func runFlagMode(data *projectInitializer) {
 	if data.dbType != "" && !isSupported(supportedDBTypes, data.dbType) {
 		fmt.Printf("Error: Unsupported database type '%s'. Supported types are: (%v)\n", data.dbType, strings.Join(supportedDBTypes, ", "))
 		os.Exit(1)

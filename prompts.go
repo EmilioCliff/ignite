@@ -6,20 +6,16 @@ import (
 	"github.com/manifoldco/promptui"
 )
 
-var _ Prompts = (*PromptContent)(nil)
-
-type Prompts interface {
-	PromptGetInput() string
-	PromptSelect(items []string) string
-}
-
 type PromptContent struct {
 	label    string
 	errorMsg string
 	success  string
 }
 
-func (pc *PromptContent) PromptGetInput() string {
+// promptGetInput will prompt the user for input using the Label field of the PromptContent object
+// and return the user's response as a string. If the user enters an empty string, an error will
+// be returned.
+func (pc *PromptContent) promptGetInput() string {
 	prompt := promptui.Prompt{
 		Label: pc.label,
 	}
@@ -32,7 +28,11 @@ func (pc *PromptContent) PromptGetInput() string {
 	return result
 }
 
-func (pc *PromptContent) PromptSelect(items []string) string {
+// promptSelect will prompt the user to select one of the given items from a list. The Label
+// field of the PromptContent object will be used as the prompt label. The user will be
+// repeatedly prompted until they select a valid item. The selected item will be returned as
+// a string.
+func (pc *PromptContent) promptSelect(items []string) string {
 	index := -1
 
 	var result string
