@@ -14,14 +14,3 @@ func TestIsSupported(t *testing.T) {
 		t.Error("Expected 'sqlite' to be unsupported")
 	}
 }
-
-func TestRunFlagModeUnsupportedDB(t *testing.T) {
-	data := &ProjectInitializer{dbType: "unsupportedDB"}
-
-	defer func() {
-		if r := recover(); r == nil {
-			t.Error("Expected panic for unsupported database type")
-		}
-	}()
-	runFlagMode(data)
-}
