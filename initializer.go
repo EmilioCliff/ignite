@@ -137,7 +137,9 @@ func (p *ProjectInitializer) getDefaultProjectStructure() map[string]interface{}
 			"mock":       nil,
 			"services":   nil,
 		},
-		"pkg":        nil,
+		"pkg": map[string]interface{}{
+			"errors.go": "",
+		},
 		"README.md":  "",
 		".gitignore": "",
 		"Makefile":   "",
