@@ -42,25 +42,25 @@ func main() {
 name: ci-test
 
 on:
-	push:
-	branches: [main]
-	pull_request:
-	branches: [main]
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
-	test:
-	name: Test
-	runs-on: ubuntu-latest
-	steps:
-		- uses: actions/checkout@v2
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
 
-		- name: Set up Go
-		uses: actions/setup-go@v4
-		with:
-			go-version: "^1.21"
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: "^1.21"
 
-		- name: Run tests
-		run: make race-test
+      - name: Run tests
+        run: make race-test
 `,
 
 	"Makefile": `
