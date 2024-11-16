@@ -141,7 +141,7 @@ func (p *projectInitializer) initializeModules() error {
 
 	log.Println("Initializing go module...")
 
-	err := runCommand("go", "mod", "init", filepath.Base(p.path))
+	err := runCommand("go", "mod", "init", p.projectName)
 	if err != nil {
 		return fmt.Errorf("failed to run go mod init: %w", err)
 	}
